@@ -30,5 +30,6 @@ public class SeleniumTest {
         Assert.assertTrue(button.getText().contains("Gmail"));
         driver.quit();
         logger.info("closed");
+        
     }
 }
