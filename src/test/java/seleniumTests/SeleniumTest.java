@@ -18,6 +18,7 @@ public class SeleniumTest {
     @Test
     public void test() {
         logger = Logger.getLogger(getClass());
+
         File chromeDriver = new File("./drivers/chromedriver");
         System.setProperty("webdriver.chrome.driver", chromeDriver.getAbsolutePath());
         driver = new ChromeDriver();
@@ -26,10 +27,15 @@ public class SeleniumTest {
         driver.get("https://www.google.com/");
         WebElement button = driver.findElement(By.xpath("//a[contains(text(),'Gmail')]"));
         String title = driver.getTitle();
+
         logger.info(title);
         Assert.assertTrue(button.getText().contains("Gmail"));
-        driver.quit();
+       // driver.quit();
         logger.info("closed");
-        
+    }
+
+    @Test
+    public void test2(){
+
     }
 }
